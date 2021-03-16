@@ -16,24 +16,41 @@
     <div id="input-field">
       <div>
         <ion-item>
-          <ion-input type="text" placeholder="input judul"></ion-input>
+          <ion-input
+            type="text"
+            placeholder="input judul"
+            [(ngModel)]="inputjudul"
+          ></ion-input>
         </ion-item>
       </div>
       <div>
         <ion-item>
-          <ion-input type="text" placeholder="input isi"></ion-input>
+          <ion-input
+            type="text"
+            placeholder="input isi"
+            [(ngModel)]="inputisi"
+          ></ion-input>
         </ion-item>
       </div>
       <div>
         <ion-item>
           <!-- <ion-input type="date" placeholder="input tanggal"></ion-input> -->
           <ion-label>Date:</ion-label>
-          <ion-datetime></ion-datetime>
+          <ion-datetime [(ngModel)]="inputtgl"></ion-datetime>
         </ion-item>
       </div>
     </div>
     <div>
-      <ion-button fill="clear" id="save-button"> save note </ion-button>
+      <ion-button fill="clear" id="save-button" (click)="savenote()">
+        save note
+      </ion-button>
+    </div>
+    <div id="input-field">
+      <div *ngFor="let i of publicjumlahnote">
+        {{publicjumlahnote[i]+1}} <br />
+        judul: {{publicjudul[i]}} <br />
+        isi: {{publicisi[i]}}
+      </div>
     </div>
     <!-- <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
   </div>
