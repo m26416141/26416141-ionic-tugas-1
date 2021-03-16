@@ -1,0 +1,7 @@
+{
+  "name": "tugas-ionic-1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
